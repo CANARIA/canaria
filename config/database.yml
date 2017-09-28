@@ -17,7 +17,7 @@ development:
   host: 127.0.0.1
   database: canaria
   username: root
-  password: root
+  password: <%= ENV.fetch("CANARIA_DB_PASS") { root } %>
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
