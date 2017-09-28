@@ -1,24 +1,21 @@
-# README
+# canaria
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+- docker for macをインストールしておくこと
+- ruby2.4を推奨
+- railsをインストールすること(`gem install rails`)
 
-Things you may want to cover:
 
-* Ruby version
+## DB
+```
+$ docker-compose up -d mysql
+```
 
-* System dependencies
+## DBマイグレーション
+```
+$ bundle exec rake db:migrate
+```
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+## サーバの起動
+```
+$ ./bin/rails s
+```
