@@ -2,19 +2,19 @@ version: '2'
 
 services:
   # api server
-  api:
-    build: .
-    ports:
-      - 5000:5000
-    links:
-      - mysql
-      - redis
-    volumes:
-      - .:/go/src/github.com/CANARIA/canaria-api
-    command: bash -c 'cd /go/src/github.com/CANARIA/canaria-api/ && go run server.go'
-    environment:
-      - DB_HOST=mysql
-    container_name: canaria-api
+  # api:
+  #   build: .
+  #   ports:
+  #     - 5000:5000
+  #   links:
+  #     - mysql
+  #     - redis
+  #   volumes:
+  #     - .:/go/src/github.com/CANARIA/canaria-api
+  #   command: bash -c 'cd /go/src/github.com/CANARIA/canaria-api/ && go run server.go'
+  #   environment:
+  #     - DB_HOST=mysql
+  #   container_name: canaria-api
 
   # mysql
   mysql:
